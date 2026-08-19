@@ -1,0 +1,21 @@
+# LLM / Generative Approaches to Medication Recommendation
+
+The newest and fastest-moving of the four areas. Roughly three threads: (1) LLMs as **clinical decision support / medication-safety review** tools layered on top of existing prescribing workflows; (2) LLMs **distilled into or fused with** the classical EHR-based recommendation models (from `01-ehr-based`); and (3) **benchmarks** for evaluating how good LLMs actually are at prescribing tasks, which is where a lot of 2025-2026 activity is concentrated (this thread being crowded is itself a signal that raw LLM prescribing accuracy is not yet trusted).
+
+| Year | Paper | Venue | Key idea | Link |
+|---|---|---|---|---|
+| 2024 | Large Language Model Distilling Medication Recommendation Model | arXiv | Distills LLM medical knowledge into a lightweight EHR-based recommendation model rather than using the LLM directly at inference | [arXiv:2402.02803](https://arxiv.org/pdf/2402.02803) |
+| 2024 | Development and Testing of a Novel LLM-Based Clinical Decision Support System for Medication Safety in 12 Clinical Specialties | arXiv | Retrieval-augmented generation (RAG) framework evaluated on real prescribing-error scenarios | [arXiv:2402.01741](https://arxiv.org/pdf/2402.01741) |
+| 2025 | KEDRec-LM: A Knowledge-Distilled Explainable Drug Recommendation Large Language Model | arXiv | Distills KG knowledge into an LLM for recommendation, targeting explainability | [arXiv:2502.20350](https://arxiv.org/html/2502.20350) |
+| 2025 | Large Language Model as Clinical Decision Support System Augments Medication Safety in 16 Clinical Specialties | Cell Reports Medicine | Extension of the 12-specialty study to 16; co-pilot mode raised serious-harm error detection accuracy ~1.5x over pharmacists alone (61% accuracy in co-pilot mode) | [paper](https://www.cell.com/cell-reports-medicine/fulltext/S2666-3791(25)00396-9) |
+| 2025 | Rx-LLM: A Benchmarking Suite to Evaluate Safe LLM Performance for Medication-Related Tasks | medRxiv/PMC | Benchmark suite specifically targeting *safety* of LLM medication-related outputs | [PMC12704647](https://pmc.ncbi.nlm.nih.gov/articles/PMC12704647/) |
+| 2025 | A Real-World Evaluation of LLM Medication Safety Reviews in NHS Primary Care | arXiv | Deployment-style evaluation in a real primary-care setting rather than a synthetic benchmark | [arXiv:2512.21127](https://arxiv.org/pdf/2512.21127) |
+| 2025 | Multi-LLM Collaboration for Medication Recommendation | arXiv | Multiple LLMs collaborating (ensemble/debate-style) on a single recommendation rather than a single-model pipeline | [arXiv:2512.05066](https://arxiv.org/html/2512.05066v1) |
+| 2026 | RxEval: A Prescription-Level Benchmark for Evaluating LLM Medication Recommendation | arXiv | Multiple-choice benchmark over real patient trajectories with reasoning-chain-perturbed distractors — more rigorous than free-text eval | [arXiv:2605.14543](https://arxiv.org/pdf/2605.14543) |
+| 2026 | PACE-RAG: Patient-Aware Contextual and Evidence-Constrained RAG for Clinical Drug Recommendation | arXiv | RAG constrained by patient context + clinical evidence, aimed at reducing hallucinated recommendations | [arXiv:2603.17356](https://arxiv.org/pdf/2603.17356) |
+| 2026 | Improving Rare Medication Recommendation with Counterfactual Data Augmentation and LLMs | arXiv | Uses LLMs to generate counterfactual training data to address the long-tail/rare-drug problem that classical EHR models struggle with | [arXiv:2607.24829](https://arxiv.org/html/2607.24829v1) |
+
+## Notes for later reading
+- **Cross-reference with `01-ehr-based`**: the "distilling"/"fusing" papers (2402.02803, KEDRec-LM) are explicitly trying to combine this thread with the classical GAMENet/SafeDrug lineage — good bridge papers if your PhD angle connects the two.
+- The sheer number of 2025-2026 **benchmark/evaluation** papers (Rx-LLM, RxEval, real-world NHS eval) suggests the open problem right now is less "can an LLM recommend a drug" and more "how do we trust/verify it" — a possible framing for where a novel contribution could sit.
+- None of these yet report head-to-head numbers against the EHR-based Jaccard/DDI-rate metrics used in `01-ehr-based` — worth checking if that comparison exists anywhere or is a gap.

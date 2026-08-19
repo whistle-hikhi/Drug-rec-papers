@@ -1,0 +1,27 @@
+# EHR / Medical-Record-Based Medication Recommendation
+
+Task: given a patient's longitudinal EHR (diagnoses, procedures, prior medications across visits), predict the medication set (or sequence of changes) for the current visit. This is the "core" medication recommendation task most of the literature is anchored to, benchmarked mainly on **MIMIC-III / MIMIC-IV**.
+
+The field's central tension, visible across almost every paper below: **accuracy (Jaccard/F1 vs. actually-prescribed drugs) vs. safety (DDI rate of the recommended combination)**. Models are usually positioned somewhere on this tradeoff curve.
+
+| Year | Paper | Venue | Key idea | Link |
+|---|---|---|---|---|
+| 2016 | RETAIN: Interpretable Predictive Model via Reverse Time Attention | NeurIPS | Two-level reverse-time attention over visit history; not drug-rec-specific but the standard interpretable-attention baseline the field builds on | [paper](https://arxiv.org/abs/1608.05745) |
+| 2017 | LEAP: Learning to Prescribe Effective and Safe Treatment Combinations for Multimorbidity | KDD | Frames prescription as sequential decision-making (RL) over a multi-instance multi-label seq2seq model | [paper](https://www.researchgate.net/publication/318918640_LEAP_Learning_to_Prescribe_Effective_and_Safe_Treatment_Combinations_for_Multimorbidity) |
+| 2019 | GAMENet: Graph Augmented Memory Networks for Recommending Medication Combination | AAAI | Memory module = GCN over the DDI graph; queries longitudinal patient records; first to jointly optimize accuracy + DDI reduction | [arXiv:1809.01852](https://arxiv.org/abs/1809.01852) |
+| 2019 | G-BERT: Pre-training of Graph Augmented Transformers for Medication Recommendation | IJCAI | GNN encodes medical-code ontology hierarchy, fed into a BERT-style visit encoder pre-trained on single-visit patients, fine-tuned on multi-visit sequences | [IJCAI page](https://www.ijcai.org/proceedings/2019/825) |
+| 2021 | SafeDrug: Dual Molecular Graph Encoders for Recommending Effective and Safe Drug Combinations | IJCAI | Uses drug molecule structure (global + local substructure graphs) and models DDI explicitly as a controllable constraint; far fewer parameters than GAMENet | [arXiv:2105.02711](https://arxiv.org/abs/2105.02711) |
+| 2021 | MICRON (Change Matters): Medication Change Prediction with Recurrent Residual Networks | IJCAI | Reframes the task as predicting the *change* from the previous visit's medications rather than the full set each time; residual updates, no full history needed at inference | [arXiv:2105.01876](https://arxiv.org/abs/2105.01876) |
+| 2022 | COGNet: Conditional Generation Net for Medication Recommendation | WWW | Copy-or-predict generation mechanism (like NMT) — copies drugs from the patient's own history or generates new ones | [arXiv:2202.06588](https://arxiv.org/abs/2202.06588) |
+| 2022 | 4SDrug: Symptom-based Set-to-set Small and Safe Drug Recommendation | KDD | Symptom-set to drug-set matching with intersection-based set augmentation + hybrid DDI penalty; targets *small* (minimal) safe drug sets | [paper](https://www.cs.emory.edu/~jyang71/files/4sdrug.pdf) |
+| 2023 | MoleRec: Combinatorial Drug Recommendation with Substructure-Aware Molecular Representation Learning | WWW | Models drug combination effects at the molecular-substructure level rather than whole-drug level | [paper](https://yangnianzu0515.github.io/files/paper5-molerec.pdf) |
+| 2023 | StratMed: Relevance Stratification between Biomedical Entities for Sparsity on Medication Recommendation | arXiv | Addresses long-tail/sparsity in EHR entities via stratified relevance modeling between diagnoses/procedures/drugs | [arXiv:2308.16781](https://arxiv.org/pdf/2308.16781) |
+| 2024 | CausalMed: Causality-Based Personalized Medication Recommendation Centered on Patient Health State | arXiv | Uses causal inference to disentangle spurious diagnosis-drug correlations from the patient's true health state | [arXiv:2404.12228](https://arxiv.org/pdf/2404.12228) |
+| 2025 | DNMDR: Dynamic Networks and Multi-view Drug Representations for Safe Medication Recommendation | arXiv | Dynamic (time-evolving) patient graph + multi-view drug representation for safety-aware recommendation | [arXiv:2501.08572](https://arxiv.org/html/2501.08572) |
+| 2025 | DrugDoctor: Enhancing Drug Recommendation in Cold-Start Scenario via Visit-Level Representation Learning | arXiv/PMC | Targets the cold-start setting (patients with little/no history) via visit-level pretraining | [PMC11418268](https://pmc.ncbi.nlm.nih.gov/articles/PMC11418268/) |
+| 2025 | CafeMed: Causal Attention Fusion Enhanced Medication Recommendation | arXiv | Causal attention fusion combining diagnosis, procedure, and drug-history signals | [arXiv:2511.14064](https://arxiv.org/html/2511.14064) |
+
+## Notes for later reading
+- **Benchmarks**: nearly everything above evaluates on MIMIC-III (older) or MIMIC-III+MIMIC-IV (newer papers); worth tracking which split/preprocessing each paper uses since results aren't always directly comparable.
+- **GAMENet → SafeDrug → MICRON → COGNet → MoleRec** is a reasonable chronological "spine" to read in order — each explicitly benchmarks against the previous ones, so reading in sequence makes the ablations legible.
+- Several 2024-2025 entries (CausalMed, DNMDR, CafeMed) are recent and not yet as heavily cited — worth checking who benchmarks against whom to find the current SOTA claim chain.
