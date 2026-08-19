@@ -507,6 +507,236 @@
 }
 
 %% =========================================================
+%% 05 - Fairness & bias
+%% =========================================================
+
+%% --- A. Foundational & surveys ---
+
+@article{obermeyer2019racialbias,
+  title   = {Dissecting Racial Bias in an Algorithm Used to Manage the Health of Populations},
+  author  = {Obermeyer, Ziad and Powers, Brian and Vogeli, Christine and Mullainathan, Sendhil},
+  journal = {Science},
+  volume  = {366},
+  number  = {6464},
+  pages   = {447--453},
+  year    = {2019}
+}
+
+@misc{chen2021algorithmfairness,
+  title  = {Algorithm Fairness in AI for Medicine and Healthcare},
+  year   = {2021},
+  eprint = {2110.00603},
+  archivePrefix = {arXiv}
+}
+
+@article{algofairnesscompmed2022,
+  title   = {Algorithmic Fairness in Computational Medicine},
+  journal = {eBioMedicine},
+  year    = {2022}
+}
+
+@article{racialbiasscopingreview2022,
+  title   = {Evaluation and Mitigation of Racial Bias in Clinical Machine Learning Models: Scoping Review},
+  journal = {JMIR Medical Informatics},
+  year    = {2022},
+  note    = {PMC9198828}
+}
+
+@misc{aidrivenhealthcarefairness2024,
+  title  = {AI-Driven Healthcare: A Survey on Ensuring Fairness and Mitigating Bias},
+  year   = {2024},
+  eprint = {2407.19655},
+  archivePrefix = {arXiv}
+}
+
+%% --- B. Prescribing / opioid-specific bias ---
+
+@misc{opioidminoritized2023,
+  title  = {Predicting Opioid Use Outcomes in Minoritized Communities},
+  year   = {2023},
+  eprint = {2307.03083},
+  archivePrefix = {arXiv}
+}
+
+@article{opioidpostopdisparity2023,
+  title   = {Disparities in Postoperative Opioid Prescribing by Race and Ethnicity: An Electronic Health Records-Based Observational Study from Northern California, 2015-2020},
+  journal = {PMC},
+  year    = {2023},
+  note    = {PMC10163682}
+}
+
+@article{oudsociodemographicbias2024,
+  title   = {Mitigating Sociodemographic Bias in Opioid Use Disorder Prediction: Fairness-Aware Machine Learning Framework},
+  journal = {JMIR AI},
+  year    = {2024},
+  note    = {PMC11372321}
+}
+
+@misc{substanceuselosbias2024,
+  title  = {Fairness in Computational Innovations: Identifying Bias in Substance Use Treatment Length of Stay Prediction Models with Policy Implications},
+  year   = {2024},
+  eprint = {2412.05832},
+  archivePrefix = {arXiv}
+}
+
+@misc{opioidmeasurementbias2024,
+  title        = {Measurement Bias in Machine Learning-Enhanced Opioid Risk Scoring Systems},
+  year         = {2024},
+  howpublished = {preprint}
+}
+
+@article{opioiddatabiasfairness2025,
+  title   = {Evaluating the Impact of Data Biases on Algorithmic Fairness and Clinical Utility of Machine Learning Models for Prolonged Opioid Use Prediction},
+  journal = {JAMIA Open},
+  year    = {2025}
+}
+
+@article{opioidtreatmentaccesssubgroup,
+  title   = {Using Machine Learning to Advance Disparities Research: Subgroup Analyses of Access to Opioid Treatment},
+  journal = {PMC},
+  note    = {PMC8928038}
+}
+
+%% --- C. General clinical-prediction fairness methodology ---
+
+@misc{ehrcontinuityfairness2023,
+  title  = {The Impact of Electronic Health Records (EHR) Data Continuity on Prediction Model Fairness and Racial-Ethnic Disparities},
+  year   = {2023},
+  eprint = {2309.01935},
+  archivePrefix = {arXiv}
+}
+
+@misc{treesbiasdetection2023,
+  title  = {Detecting Algorithmic Bias in Medical-AI Models Using Trees},
+  year   = {2023},
+  eprint = {2312.02959},
+  archivePrefix = {arXiv}
+}
+
+@misc{diabeticreadmissionequity2024,
+  title  = {Equity in Healthcare: Analyzing Disparities in Machine Learning Predictions of Diabetic Patient Readmissions},
+  year   = {2024},
+  eprint = {2403.19057},
+  archivePrefix = {arXiv}
+}
+
+@article{matchedcounterpartmortality2024,
+  title   = {Assessing Fairness in Machine Learning Models: A Study of Racial Bias Using Matched Counterparts in Mortality Prediction for Patients with Chronic Diseases},
+  journal = {Journal of Biomedical Informatics},
+  year    = {2024}
+}
+
+@article{readmissionbiasaudit2025,
+  title   = {Evaluating Algorithmic Bias in 30-Day Hospital Readmission Models: Retrospective Analysis},
+  journal = {PMC},
+  year    = {2025},
+  note    = {PMC11066744}
+}
+
+@misc{featurelevelfairness2025,
+  title        = {Refocusing Algorithmic Fairness on Feature-Level Bias: A Diagnostic Approach Using Dutch EHR Data},
+  year         = {2025},
+  howpublished = {medRxiv}
+}
+
+@misc{breastcancerfairnessaware2026,
+  title  = {Multimodal Survival Modeling and Fairness-Aware Clinical Machine Learning for 5-Year Breast Cancer Risk Prediction},
+  year   = {2026},
+  eprint = {2602.21648},
+  archivePrefix = {arXiv}
+}
+
+%% --- D. LLM / clinical-NLP bias benchmarks ---
+
+@article{equitymedqa2024,
+  title   = {A Toolbox for Surfacing Health Equity Harms and Biases in Large Language Models},
+  journal = {Nature Medicine},
+  year    = {2024},
+  eprint  = {2403.12025},
+  archivePrefix = {arXiv}
+}
+
+@misc{climb2024,
+  title  = {{CLIMB}: A Benchmark of Clinical Bias in Large Language Models},
+  year   = {2024},
+  eprint = {2407.05250},
+  archivePrefix = {arXiv}
+}
+
+@misc{medprofessionalbias2024,
+  title  = {Evaluation of Bias Towards Medical Professionals in Large Language Models},
+  year   = {2024},
+  eprint = {2407.12031},
+  archivePrefix = {arXiv}
+}
+
+@article{medllmdisparitiesreview2025,
+  title   = {Evaluating and Addressing Demographic Disparities in Medical Large Language Models: A Systematic Review},
+  journal = {International Journal for Equity in Health},
+  year    = {2025},
+  note    = {PMC11866893}
+}
+
+@misc{ragmedqabias2025,
+  title  = {Evaluating Bias in Retrieval-Augmented Medical Question-Answering Systems},
+  year   = {2025},
+  eprint = {2503.15454},
+  archivePrefix = {arXiv}
+}
+
+@misc{fairmedqa2025,
+  title  = {{FairMedQA}: Benchmarking Bias in Large Language Models for Medical Question Answering},
+  year   = {2025},
+  eprint = {2505.19562},
+  archivePrefix = {arXiv}
+}
+
+@misc{nuancedmedllmbias2025,
+  title  = {Toward Revealing Nuanced Biases in Medical LLMs},
+  year   = {2025},
+  eprint = {2507.21176},
+  archivePrefix = {arXiv}
+}
+
+@misc{drbias2025,
+  title  = {{Dr. Bias}: Social Disparities in AI-Powered Medical Guidance},
+  year   = {2025},
+  eprint = {2510.09162},
+  archivePrefix = {arXiv}
+}
+
+@misc{raceethnicityllmbias2026,
+  title  = {Race, Ethnicity and Their Implication on Bias in Large Language Models},
+  year   = {2026},
+  eprint = {2601.12868},
+  archivePrefix = {arXiv}
+}
+
+%% --- E. Fairness-aware recommender-systems methodology ---
+
+@misc{fairnessrecfoundations2022,
+  title  = {Fairness in Recommendation: Foundations, Methods and Applications},
+  year   = {2022},
+  eprint = {2205.13619},
+  archivePrefix = {arXiv}
+}
+
+@misc{fairnessawareressurvey2023,
+  title  = {A Survey on Fairness-Aware Recommender Systems},
+  year   = {2023},
+  eprint = {2306.00403},
+  archivePrefix = {arXiv}
+}
+
+@inproceedings{fairnesshealthcarerecsys2024,
+  title     = {Understanding Fairness in Recommender Systems: A Healthcare Perspective},
+  booktitle = {Proceedings of the 18th ACM Conference on Recommender Systems (RecSys)},
+  year      = {2024},
+  eprint    = {2409.03893},
+  archivePrefix = {arXiv}
+}
+
+%% =========================================================
 %% Surveys (referenced in top-level README)
 %% =========================================================
 

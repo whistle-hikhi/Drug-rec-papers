@@ -12,6 +12,7 @@ papers/
   02-ddi-aware/           interaction-safety-constrained recommendation & DDI prediction
   03-knowledge-graph-gnn/ KG- and GNN-based drug/medicine modeling
   04-llm-generative/      LLMs for medication recommendation & clinical decision support
+  05-fairness-bias/       fairness/bias evidence & methodology, cross-cutting across 01-04
 references.bib            consolidated BibTeX for everything below
 NOTES.md                  synthesis: trends, tensions, gaps across the four areas
 ```
@@ -28,7 +29,8 @@ Start here before diving into individual models — these give the lay of the la
 | DDI prediction | [Deep learning for drug-drug interaction prediction: A comprehensive review](https://onlinelibrary.wiley.com/doi/full/10.1002/qub2.32) | Quantitative Biology, 2024 |
 | KG for drug repurposing | [Knowledge Graphs for drug repurposing: a review of databases and methods](https://academic.oup.com/bib/article/25/6/bbae461/7774899) | Briefings in Bioinformatics, 2024 |
 | LLMs for clinical reasoning | [Aligning Clinical Needs and AI Capabilities: A Survey on LLMs for Medical Reasoning](https://arxiv.org/pdf/2607.07761) | arXiv, 2026 |
+| Fairness/bias in clinical AI | [Dissecting Racial Bias in an Algorithm Used to Manage the Health of Populations](https://www.science.org/doi/10.1126/science.aax2342) — landmark, not a survey but the reference point everything else cites | Science, 2019 |
 
 ## Status
 
-Seeded 2026-08-19 via targeted search across the four focus areas (~55 papers, after a follow-up pass that filled out `04-llm-generative`'s architecture side — agentic/multi-agent, RAG, fine-tuning/alignment, KG-LLM fusion). Not exhaustive — treat as a scaffold to keep extending as you read. See `NOTES.md` for what's thin and worth digging into next.
+Seeded 2026-08-19 via targeted search across the four focus areas (~55 papers), then extended twice the same day: once to fill out `04-llm-generative`'s architecture side (agentic/multi-agent, RAG, fine-tuning/alignment, KG-LLM fusion), and once to add `05-fairness-bias` (~29 papers) after the initial pass surfaced no fairness/bias coverage at all. Collection is now ~84 papers. Not exhaustive — treat as a scaffold to keep extending as you read. See `NOTES.md` for what's thin and worth digging into next.
