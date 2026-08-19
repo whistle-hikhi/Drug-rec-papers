@@ -31,4 +31,4 @@ Start here before diving into individual models — these give the lay of the la
 
 ## Status
 
-Seeded 2026-08-19 via targeted search across the four focus areas (~35 papers). Not exhaustive — treat as a scaffold to keep extending as you read. See `NOTES.md` for what's thin and worth digging into next.
+Seeded 2026-08-19 via targeted search across the four focus areas (~55 papers, after a follow-up pass that filled out `04-llm-generative`'s architecture side — agentic/multi-agent, RAG, fine-tuning/alignment, KG-LLM fusion). Not exhaustive — treat as a scaffold to keep extending as you read. See `NOTES.md` for what's thin and worth digging into next.
