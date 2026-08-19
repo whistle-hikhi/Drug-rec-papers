@@ -1,6 +1,6 @@
 # Cross-Cutting Notes
 
-Synthesis across [`01-ehr-based`](papers/01-ehr-based/README.md), [`02-ddi-aware`](papers/02-ddi-aware/README.md), [`03-knowledge-graph-gnn`](papers/03-knowledge-graph-gnn/README.md), [`04-llm-generative`](papers/04-llm-generative/README.md), [`05-fairness-bias`](papers/05-fairness-bias/README.md). Update this as the collection grows.
+Synthesis across [`01-ehr-based`](papers/01-ehr-based/README.md), [`02-ddi-aware`](papers/02-ddi-aware/README.md), [`03-knowledge-graph-gnn`](papers/03-knowledge-graph-gnn/README.md), [`04-llm-generative`](papers/04-llm-generative/README.md), [`05-fairness-bias`](papers/05-fairness-bias/README.md), [`06-datasets-beyond-mimic`](papers/06-datasets-beyond-mimic/README.md). Update this as the collection grows.
 
 ## The field's recurring axis: accuracy vs. safety
 
@@ -20,7 +20,7 @@ Worth stating explicitly in a related-work section rather than treating each are
 
 ## Gaps / thin spots in the current collection (worth expanding)
 
-- **No papers yet on evaluation datasets beyond MIMIC** — everything in `01-ehr-based` leans on MIMIC-III/IV; worth checking whether other EHR datasets (eICU, CPRD, non-US records) are used anywhere, since MIMIC-only evaluation is a known field-wide limitation.
+- ~~No papers yet on evaluation datasets beyond MIMIC~~ — **addressed 2026-08-19**: new `06-datasets-beyond-mimic` category. eICU is the practical multi-center alternative already used by a few papers (DKINet, TEMPT); CPRD (UK primary care) and NHIRD (Taiwan claims) exist but appear *unused* for medication-recommendation modeling specifically — that's a real opportunity, not just a search gap. Sharper follow-up gap: no paper trains on MIMIC and reports the performance drop when evaluated zero-shot on a different dataset — genuine external/transfer validation is still missing.
 - ~~No explicit fairness/bias papers~~ — **addressed 2026-08-19**: new `05-fairness-bias` category, ~29 papers. But the search also surfaced a *narrower, sharper* gap worth carrying forward: no paper evaluates fairness on the actual combinatorial medication-recommendation task (GAMENet/SafeDrug-style, subgroup-broken-down Jaccard/DDI-rate) — only on adjacent tasks (opioid-use-disorder risk, readmission, LLM medical QA). That intersection looks like genuine white space, not just a search artifact, though it deserves a second, more exhaustive pass (ACM FAccT, health-informatics venues) before relying on that conclusion.
 - **No cost-effectiveness or clinician-in-the-loop / human-factors papers** — the collection is all model-side; nothing yet on how clinicians actually use or override these systems in practice.
 - ~~LLM area has heavy benchmark/eval representation but few new architectures~~ — **addressed 2026-08-19**: `04-llm-generative` now has 20 architecture papers across four threads (agentic/multi-agent, RAG, fine-tuning/alignment, KG-LLM fusion) plus 6 benchmark/eval papers. FLAME and SafeRx-Agent are the strongest read-first picks since both explicitly target DDI-safety, mirroring GAMENet/SafeDrug's role in `01-ehr-based`.
@@ -34,9 +34,11 @@ Worth stating explicitly in a related-work section rather than treating each are
 4. One KG paper (Hetionet or DRKG construction) to understand what's actually inside the knowledge graphs being embedded.
 5. Two or three LLM papers spanning the "distillation," "safety benchmark," and "RAG" threads to see how differently framed the same underlying problem is.
 6. Obermeyer et al. 2019 (Science) as the fairness-in-clinical-AI reference point, then one opioid-prescribing-bias paper from `05-fairness-bias` section B as the closest existing analogue to "fairness in drug recommendation."
+7. DKINet (`06-datasets-beyond-mimic` section A) to see the current best-practice pattern for multi-dataset evaluation (MIMIC-III + MIMIC-IV + eICU in one paper) before assuming MIMIC-only evaluation is unavoidable.
 
 ## Log
 
 - **2026-08-19**: Initial seed, ~35 papers across 4 areas via targeted web search. Not systematic (no formal database query / PRISMA-style search yet) — treat as a scaffold.
 - **2026-08-19 (later same day)**: Filled the LLM-architecture gap noted above — added ~20 papers to `04-llm-generative`, split into agentic/multi-agent, RAG, fine-tuning/alignment, and KG-LLM fusion sub-threads, plus one taxonomy/survey paper (2602.04813). Collection is now ~55 papers total.
 - **2026-08-19 (again)**: Added `05-fairness-bias` (~29 papers: foundational/surveys, opioid/prescribing-specific bias, general clinical-prediction fairness methodology, LLM/clinical-NLP bias benchmarks, fairness-aware recommender-systems methodology). Surfaced a sharper follow-up gap: no fairness audit exists yet of the actual medication-recommendation task itself, only adjacent tasks. Collection is now ~84 papers total.
+- **2026-08-19 (again)**: Added `06-datasets-beyond-mimic` (~9 papers/resources: eICU multi-center evidence, non-US/non-English datasets — CPRD, NHIRD, Korean EHR, Chinese CDrugRed — and a private-hospital external-validation example, PREMIER). Surfaced a sharper follow-up gap: no paper does genuine MIMIC-trained, externally-evaluated transfer validation; CPRD/NHIRD exist but are apparently unused for medication-recommendation modeling. Collection is now ~93 papers total.

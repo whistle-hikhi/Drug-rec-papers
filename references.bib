@@ -737,6 +737,75 @@
 }
 
 %% =========================================================
+%% 06 - Evaluation datasets beyond MIMIC
+%% =========================================================
+
+%% --- A. Multi-center public ICU data ---
+
+@article{pollard2018eicu,
+  title   = {The eICU Collaborative Research Database, a Freely Available Multi-Center Database for Critical Care Research},
+  author  = {Pollard, Tom J. and Johnson, Alistair E. W. and Raffa, Jesse D. and Celi, Leo A. and Mark, Roger G. and Badawi, Omar},
+  journal = {Scientific Data},
+  volume  = {5},
+  year    = {2018},
+  note    = {\url{https://physionet.org/content/eicu-crd/2.0/}}
+}
+
+@misc{dkinet2023,
+  title  = {{DKINet}: Medication Recommendation via Domain Knowledge Informed Deep Learning},
+  year   = {2023},
+  eprint = {2305.19604},
+  archivePrefix = {arXiv}
+}
+
+%% Note: TEMPT (contrastiveprompttuning2024medrec) is already defined in the 04 - LLM section above;
+%% cross-referenced here in the README for its eICU multi-center dataset framing, not re-listed as a duplicate bib entry.
+
+%% --- B. Non-US / non-English hospital & claims datasets ---
+
+@article{herrett2015cprd,
+  title   = {Data Resource Profile: Clinical Practice Research Datalink (CPRD)},
+  author  = {Herrett, Emily and Gallagher, Arlene M. and Bhaskaran, Krishnan and Forbes, Harriet and Mathur, Rohini and van Staa, Tjeerd and Smeeth, Liam},
+  journal = {International Journal of Epidemiology},
+  year    = {2015},
+  note    = {PMC4521131}
+}
+
+@article{nhird2018,
+  title   = {Data Resource Profile: The National Health Insurance Research Database (NHIRD) of Taiwan},
+  year    = {2018},
+  note    = {PMC6367203}
+}
+
+@article{koreadiabetesmdp2021,
+  title   = {Optimal Treatment Recommendations for Diabetes Patients Using the Markov Decision Process along with the South Korean Electronic Health Records},
+  journal = {PMC},
+  year    = {2021},
+  note    = {PMC7994640}
+}
+
+@misc{chip2025task2,
+  title  = {Overview of {CHIP} 2025 Shared Task 2: Discharge Medication Recommendation for Metabolic Diseases Based on Chinese Electronic Health Records},
+  year   = {2025},
+  eprint = {2511.06230},
+  archivePrefix = {arXiv}
+}
+
+%% Note: Chinese Discharge Drug Recommendation with LLMs (chinesedischargedrugrec2025) is already defined
+%% in the 04 - LLM section above; cross-referenced here for its use of the CDrugRed-related dataset.
+
+%% --- C. Private single-institution datasets used for external validation ---
+
+@article{premier2021,
+  title   = {{PREMIER}: Personalizing Medication Recommendation with a Graph-Based Approach},
+  journal = {ACM Transactions on Information Systems},
+  volume  = {40},
+  number  = {3},
+  year    = {2021},
+  note    = {Evaluated on MIMIC-III and a private hospital dataset without procedure codes}
+}
+
+%% =========================================================
 %% Surveys (referenced in top-level README)
 %% =========================================================
 

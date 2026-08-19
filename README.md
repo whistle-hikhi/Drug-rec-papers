@@ -13,6 +13,7 @@ papers/
   03-knowledge-graph-gnn/ KG- and GNN-based drug/medicine modeling
   04-llm-generative/      LLMs for medication recommendation & clinical decision support
   05-fairness-bias/       fairness/bias evidence & methodology, cross-cutting across 01-04
+  06-datasets-beyond-mimic/ non-MIMIC evaluation datasets (eICU, CPRD, NHIRD, private/non-US EHR)
 references.bib            consolidated BibTeX for everything below
 NOTES.md                  synthesis: trends, tensions, gaps across the four areas
 ```
@@ -33,4 +34,4 @@ Start here before diving into individual models — these give the lay of the la
 
 ## Status
 
-Seeded 2026-08-19 via targeted search across the four focus areas (~55 papers), then extended twice the same day: once to fill out `04-llm-generative`'s architecture side (agentic/multi-agent, RAG, fine-tuning/alignment, KG-LLM fusion), and once to add `05-fairness-bias` (~29 papers) after the initial pass surfaced no fairness/bias coverage at all. Collection is now ~84 papers. Not exhaustive — treat as a scaffold to keep extending as you read. See `NOTES.md` for what's thin and worth digging into next.
+Seeded 2026-08-19 via targeted search across the four focus areas (~55 papers), then extended three times the same day: to fill out `04-llm-generative`'s architecture side (agentic/multi-agent, RAG, fine-tuning/alignment, KG-LLM fusion); to add `05-fairness-bias` (~29 papers) after the initial pass surfaced no fairness/bias coverage at all; and to add `06-datasets-beyond-mimic` (~9 papers/resources) after noting every `01-ehr-based` model was benchmarked on MIMIC alone. Collection is now ~93 papers. Not exhaustive — treat as a scaffold to keep extending as you read. See `NOTES.md` for what's thin and worth digging into next.
