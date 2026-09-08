@@ -13,6 +13,7 @@ The newest and fastest-moving of the four areas. Split into two parts below: **a
 | 2026 | SafeRx-Agent: A Knowledge-Grounded Multi-Agent Framework for Safe and Explainable Medication Recommendation | arXiv | Multi-agent pipeline grounded in external knowledge; first to target fine-grained (4th-level ATC code) medication generation with explicit safety/explainability roles split across agents | [arXiv:2605.29146](https://arxiv.org/html/2605.29146) |
 | 2026 | ClinicalAgents: Multi-Agent Orchestration for Clinical Decision Making with Dual-Memory | arXiv | Orchestrates multiple specialized agents with a dual (short/long-term) memory architecture for clinical decisions, prescribing included | [arXiv:2603.26182](https://arxiv.org/html/2603.26182v1) |
 | 2026 | TheraAgent: Self-Improving Therapeutic Agent for Precise and Comprehensive Treatment Planning | arXiv | Self-improving loop (agent critiques/refines its own treatment plans) rather than a static single-pass pipeline | [arXiv:2605.05963](https://arxiv.org/pdf/2605.05963) |
+| 2025 | Lessons Learned from Evaluation of LLM-Based Multi-Agents in Safer Therapy Recommendation | arXiv | Empirical post-mortem on where multi-agent therapy-recommendation pipelines actually fail — a useful corrective/reality-check to read alongside the more optimistic architecture papers above | [arXiv:2507.10911](https://arxiv.org/abs/2507.10911) |
 
 ### Retrieval-augmented generation (RAG)
 
@@ -46,7 +47,7 @@ The newest and fastest-moving of the four areas. Split into two parts below: **a
 |---|---|---|---|---|
 | 2025 | DKG-LLM: Dynamic Knowledge Graph and LLM Integration for Diagnosis and Personalized Treatment Recommendations | arXiv | Dynamically *builds* a KG from heterogeneous clinical text + literature at inference time (rather than using a static pre-built KG like Hetionet/DRKG) before recommending | [arXiv:2508.06186](https://arxiv.org/abs/2508.06186) |
 | 2025 | Knowledge-Guided LLM for Automatic Pediatric Dental Record Understanding and Safe Antibiotic Recommendation | arXiv | Hybrid: foundation LLM augmented by both retrieval *and* embedding fusion over a domain KG (UMLS/SNOMED-CT/DrugBank + dosage guidelines) | [arXiv:2512.09127](https://arxiv.org/pdf/2512.09127) |
-| 2025 | Chinese Discharge Drug Recommendation in Metabolic Diseases with Large Language Models | arXiv | Domain- and language-specific (Chinese, metabolic disease) LLM recommendation system — useful as a non-English/non-MIMIC data point | [arXiv:2510.21084](https://arxiv.org/pdf/2510.21084) |
+| 2025 | MediRec: Enhancing Chinese Medication Recommendation with Explainable Clinical Reasoning | arXiv | Combines clinically-grounded reasoning-chain distillation with RL to improve both accuracy and interpretability, for Chinese-language discharge medication recommendation — useful as a non-English/non-MIMIC data point. **Title correction (2026-09-08)**: previously listed here as "Chinese Discharge Drug Recommendation in Metabolic Diseases with Large Language Models" — same arXiv ID (2510.21084), corrected title per current arxiv.org listing. | [arXiv:2510.21084](https://arxiv.org/pdf/2510.21084) |
 
 ## Benchmarks & Safety Evaluation
 
