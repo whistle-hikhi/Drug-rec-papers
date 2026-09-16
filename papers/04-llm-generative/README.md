@@ -40,6 +40,7 @@ The newest and fastest-moving of the four areas. Split into two parts below: **a
 | 2025 | Multi-LLM Collaboration for Medication Recommendation | arXiv | Multiple LLMs collaborate (ensemble/debate-style) guided by explicit interaction modeling, rather than one model deciding alone | [arXiv:2512.05066](https://arxiv.org/html/2512.05066v1) |
 | 2025 | FLAME: Fine-Grained List-Wise Alignment for Generative Medication Recommendation | NeurIPS | Reframes prescription generation as a sequential drug-by-drug decision process; step-wise GRPO with potential-based reward shaping to explicitly model DDIs per-step | [arXiv:2505.20218](https://arxiv.org/pdf/2505.20218) |
 | 2026 | Improving Rare Medication Recommendation with Counterfactual Data Augmentation and LLMs | arXiv | Uses an LLM to generate counterfactual training examples targeting the long-tail/rare-drug problem classical EHR models struggle with | [arXiv:2607.24829](https://arxiv.org/html/2607.24829v1) |
+| 2026 | RES-MR: Risk-Aware Reasoning for Explainable and Safe Medication Recommendation | SIGIR | Top-venue find (added 2026-09-08). Two-stage training with explainable clinical-reasoning distillation; the key departure from FLAME/SafeRx-Agent is **personalized, patient-specific risk tolerance** rather than a fixed, patient-agnostic safety constraint — directly names the limitation ("black-box," one-size-fits-all safety) that motivates most of this whole category | [ACM DL](https://doi.org/10.1145/3805712.3809604) |
 
 ### Knowledge-graph / LLM fusion
 
